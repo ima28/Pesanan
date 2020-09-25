@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home_menu"
+        android:title="@string/HOME"
+        android:icon="@drawable/homee"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/order_menu"
+        android:title="@string/ORDER"
+        android:icon="@drawable/orderr"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/lain_menu"
+        android:title="@string/PROFILE"
+        android:icon="@drawable/lainnya"
+        app:showAsAction="ifRoom"/>
 
 </menu>

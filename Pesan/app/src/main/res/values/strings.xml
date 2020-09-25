@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Pesan</string>
+    <string name="HOME">HOME</string>
+    <string name="ORDER">ORDER</string>
+    <string name="PROFILE">PROFILE</string>
 </resources>

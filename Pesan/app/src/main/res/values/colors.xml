@@ -3,4 +3,9 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="colorNavigationIcon">#6EBF6E</color>
+    <color name="colorNavigationText">#ffffff</color>
+    <color name="ijo">#017b64</color>
+    <color name="black">#000</color>
+    <color name="greenlime">#6EBF6E</color>
 </resources>
