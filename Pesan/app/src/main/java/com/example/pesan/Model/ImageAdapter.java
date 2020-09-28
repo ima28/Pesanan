@@ -1,6 +1,7 @@
 package com.example.pesan.Model;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -8,43 +9,64 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
+import com.bumptech.glide.Glide;
 import com.example.pesan.R;
+import com.smarteist.autoimageslider.SliderViewAdapter;
 
-public class ImageAdapter extends PagerAdapter {
-
-    private Context mContext;
+public class ImageAdapter extends SliderViewAdapter<ImageAdapter.SliderAdapterVH> {
+    private Context context;
 
     public ImageAdapter(Context context){
-        this.mContext = context;
+        this.context=context;
+
     }
+
+    @Override
+    public SliderAdapterVH onCreateViewHolder(ViewGroup parent) {
+        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragmenthome,null);
+        return new SliderAdapterVH(inflate);
+    }
+
+    @Override
+    public void onBindViewHolder(SliderAdapterVH viewHolder, int position) {
+        switch (position){
+            case 0:
+                Glide.with(viewHolder.itemView)
+                        .load("https://awsimages.detik.net.id/community/media/visual/2017/10/09/c699ee52-da4d-49cb-bbd5-206c02badb64.jpg?a=1")
+                        .into(viewHolder.imageViewBackground);
+                break;
+
+            case 1:
+                Glide.with(viewHolder.itemView)
+                        .load("https://majalahayah.com/wp-content/uploads/2020/01/mie-goreng-saus-tiram.jpg")
+                        .into(viewHolder.imageViewBackground);
+                break;
+
+            default:
+            case 2:
+                Glide.with(viewHolder.itemView)
+                        .load("https://majalahayah.com/wp-content/uploads/2020/01/mie-goreng-saus-tiram.jpg")
+                        .into(viewHolder.imageViewBackground);
+
+        }
+
+    }
+
     @Override
     public int getCount() {
-        return sliderImageid.length;
+        return 10;
     }
 
-    private int[] sliderImageid = new int[]{
-            R.drawable.dom,
-            R.drawable.vp2,
-            R.drawable.vp1,
-    };
+    class SliderAdapterVH extends SliderViewAdapter.ViewHolder {
+        View itemView;
+        ImageView imageViewBackground;
+        public SliderAdapterVH(View itemView) {
+            super(itemView);
+            imageViewBackground=itemView.findViewById(R.id.iv_auto_image_slider);
 
-    @Override
-    public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return view == object;
+            this.itemView=itemView;
+        }
     }
 
-    @NonNull
-    @Override
-    public Object instantiateItem(@NonNull ViewGroup container, int position) {
-        ImageView mImageView = new ImageView(mContext);
-        mImageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        mImageView.setImageResource(sliderImageid[position]);
-        container.addView(mImageView,0);
-        return mImageView;
-    }
-
-    @Override
-    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-        container.removeView((ImageView)object);
-    }
 }
+

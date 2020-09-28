@@ -1,6 +1,30 @@
 <resources>
-    <string name="app_name">Pesan</string>
+    <string name="app_name">Pemesanan</string>
     <string name="HOME">HOME</string>
     <string name="ORDER">ORDER</string>
     <string name="PROFILE">PROFILE</string>
+    <string name="tentang">Kami adalah salah satu perusahaan IT di Indonesia yang melayani jasa perencanaan,
+                           pengembangan dan pengelolaan sistem serta aplikasi berskala kecil hingga besar.
+                           Dengan menguasai berbagai platform development tools terutama yang menggunakan teknologi
+                           berbasis web maupun mobile, kami mampu memberikan solusi sistem dan aplikasi yang tepat guna
+                           dengan harga yang terjangkau.
+                           Kami juga menyediakan produk-produk aplikasi yang dapat diimplementasikan pada berbagai bidang
+                           bisnis untuk meningkatkan produktivitas dan layanan.
+                           Komitmen kami adalah menjadi perusahaan yang dapat memberikan pelayanan kepada seluruh bisnis dan
+                           perusahaan lokal di Indonesia khususnya UMKM agar dapat bersaing di era industri 4.0.
+                           Kami adalah sebuah Perusahaan IT yang melayani jasa pembuatan program di jogja maupun diluar jogja.
+                           Selain sebuah perusahaan yang melayani jasa pembuatan aplikasi android di jogja berbasis website
+                           tetapi juga berbagai jenis program dan software yang dibutuhkan oleh berbagai industri, mulai perkantoran,
+                           pabrik dan perusahaan berskala nasional maupun internasional.
+                           Beberapa Software atau program aplikasi yang kami buat adalah software atau program aplikasi berbasis web,
+                           diantaranya adalah sebagai berikut:
+                           Software ERP,Software CRM,Software Administrasi,Software Akuntansi / Accounting,Software Apotik,Software Billing,
+                           Software Export Import,Software HRD,Software Inventory,Software Kasir,Software Klinik,Software Manajemen Aset,
+                           Software Manajemen Pemeliharaan,Software Manajemen Proyek,Software Manufacture,Tracking System,Customer Relationship Management,
+                           Sistem Bonus dan Kedisiplinan Pegawai,Software Absensi,Penggajian / Payroll,Software Pengarsipan dan E-Filing,
+                           Software Perhotelan,Software Perpustakan,Software Point Of Sales,Software Rencana Pelaksaan Anggaran Proyek,Software Restaurant,
+                           Software Rumah Sakit,Software Universitas/Sekolah,Software Showroom Mobil Motor,Software Pemeliharaan data Customer,
+                           Software Sistem Produksi,Software Travel Agent,Software Zakat.
+                           Diera modern seperti sekarang ini kebutuhan software adalah hal yang paling penting untuk menunjang stabilitas perusahaan,
+                           karena dengan menggunakan program atau sistem software yang canggih tentu perusahaan akan menjadi lebih stabil dalam pengelolaan sistem nya.</string>
 </resources>
