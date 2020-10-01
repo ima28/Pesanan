@@ -16,6 +16,7 @@
         android:textStyle="bold"
         android:id="@+id/btnakun"
         android:textColor="#000"
+        android:background="@drawable/custom2"
         android:theme="@style/buttonstyle1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"/>
@@ -23,26 +24,28 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="TENTANG PERUSAHAAN"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@drawable/custom2"
+        android:id="@+id/btntentang"
+        android:textColor="#000"
+        android:theme="@style/buttonstyle1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="LOGOUT"
         android:textSize="20sp"
+        android:background="@drawable/custom2"
         android:textStyle="bold"
         android:id="@+id/btnlogout"
         android:textColor="#000"
         android:theme="@style/buttonstyle1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TENTANG PERUSAHAAN"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:id="@+id/btntentang"
-        android:textColor="#000"
-        android:theme="@style/buttonstyle1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="140dp"/>
 
 
 

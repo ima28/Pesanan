@@ -31,30 +31,23 @@ public class ImageAdapter extends SliderViewAdapter<ImageAdapter.SliderAdapterVH
     public void onBindViewHolder(SliderAdapterVH viewHolder, int position) {
         switch (position){
             case 0:
-                Glide.with(viewHolder.itemView)
-                        .load("https://awsimages.detik.net.id/community/media/visual/2017/10/09/c699ee52-da4d-49cb-bbd5-206c02badb64.jpg?a=1")
-                        .into(viewHolder.imageViewBackground);
+                viewHolder.imageViewBackground.setImageResource(R.drawable.db);
                 break;
-
             case 1:
-                Glide.with(viewHolder.itemView)
-                        .load("https://majalahayah.com/wp-content/uploads/2020/01/mie-goreng-saus-tiram.jpg")
-                        .into(viewHolder.imageViewBackground);
+                viewHolder.imageViewBackground.setImageResource(R.drawable.nomad);
                 break;
-
             default:
             case 2:
-                Glide.with(viewHolder.itemView)
-                        .load("https://majalahayah.com/wp-content/uploads/2020/01/mie-goreng-saus-tiram.jpg")
-                        .into(viewHolder.imageViewBackground);
-
+                viewHolder.imageViewBackground.setImageResource(R.drawable.produk);
+                break;
         }
 
     }
 
     @Override
     public int getCount() {
-        return 10;
+
+        return 3;
     }
 
     class SliderAdapterVH extends SliderViewAdapter.ViewHolder {

@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,7 +19,7 @@ import com.example.pesan.R;
 
 public class LainFragment extends Fragment {
     Button btnakun,btnlogout,btntentang;
-
+    View view;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -51,48 +52,58 @@ public class LainFragment extends Fragment {
         return fragment;
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreateView(LayoutInflater inflater, Bundle savedInstanceState, ViewGroup container) {
         super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_login);
-            btnakun = (Button) btnakun.findViewById(R.id.btnakun);
-            btnakun.setOnClickListener(new View.OnClickListener() {
+        view = inflater.inflate(R.layout.fragmentlainnya, container, false);
+        btnakun = (Button) btnakun.findViewById(R.id.btnakun);
+        btnakun.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnakun();
+                return;
+            }
+        });
+
+            btnlogout = (Button) btnlogout.findViewById(R.id.btnlogout);
+            btnlogout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(LainFragment.this, Akun.class));
-                    finish();
+                    return;
                 }
             });
 
-            btnlogout = (Button) btnlogout.findViewById(btnlogout);
-            btnlogout.setOnClick Listener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    finish();
-                }
-            });
-
-            btntentang = (Button) btntentang.findViewById(btntentang);
+            btntentang = (Button) btntentang.findViewById(R.id.btntentang);
             btntentang.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
-                    startActivity(new Intent(LainFragment.this, Tentang.class));
-                    finish();
+                    btntentang();
                 }
             });
 
 
         }
 
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+    private void btntentang() {
+        Intent i1 = new Intent(getActivity(),Tentang.class);
+        startActivity(i1);
+        return;
+    }
+
+    private void btnakun() {
+        Intent i2 = new Intent(getActivity(),Akun.class);
+        startActivity(i2);
+        return;
+    }
+
+       // if (getArguments() != null) {
+            //mParam1 = getArguments().getString(ARG_PARAM1);
+         //   mParam2 = getArguments().getString(ARG_PARAM2);
+       // }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        // Inflate the l ayout for this fragment
         return inflater.inflate(R.layout.fragmentlainnya, container, false);
     }
 }

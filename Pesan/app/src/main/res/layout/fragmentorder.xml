@@ -8,7 +8,7 @@
     tools:context=".Fragment.OrderFragment">
 
 
-        <EditText
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/edtnama"
@@ -59,13 +59,12 @@
         android:textAlignment="center"
         android:layout_alignParentEnd="true"
         android:gravity="center_horizontal" />
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/txtjenisapk"
+        android:id="@+id/edtjenisapk"
         android:layout_marginTop="200dp"
         android:hint="Jenis Aplikasi"
-        android:textSize="18dp"
         android:textColorHighlight="#0000"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -73,44 +72,12 @@
         android:textAlignment="center"
         android:layout_alignParentEnd="true"
         android:gravity="center_horizontal" />
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioweb"
-        android:textSize="20dp"
-        android:layout_marginTop="240dp"
-        android:hint="WEBSITE"
-        android:textColorHighlight="#0000"
-        android:layout_alignParentLeft="true"
-        android:textAlignment="center"
-        android:gravity="center_horizontal" />
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/radiomobile"
-        android:layout_marginTop="270dp"
-        android:hint="ANDROID"
-        android:textSize="20dp"
-        android:textColorHighlight="#0000"
-        android:layout_alignParentLeft="true"
-        android:textAlignment="center"
-        android:gravity="center_horizontal" />
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioios"
-        android:layout_marginTop="300dp"
-        android:hint="IOS"
-        android:textSize="20dp"
-        android:textColorHighlight="#0000"
-        android:layout_alignParentLeft="true"
-        android:textAlignment="center"
-        android:gravity="center_horizontal" />
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:id="@+id/edtdeskripsi"
-        android:layout_marginTop="330dp"
+        android:layout_marginTop="250dp"
         android:hint="Deskripsi"
         android:textColorHighlight="#0000"
         android:layout_alignParentLeft="true"
@@ -123,7 +90,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/edtbudget"
-        android:layout_marginTop="430dp"
+        android:layout_marginTop="350dp"
         android:hint="Budget"
         android:textColorHighlight="#0000"
         android:layout_alignParentLeft="true"
@@ -136,7 +103,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/edttimeline"
-        android:layout_marginTop="475dp"
+        android:layout_marginTop="400dp"
         android:hint="Timeline"
         android:textColorHighlight="#0000"
         android:layout_alignParentLeft="true"
@@ -151,11 +118,47 @@
         android:text="GET YOUR SOLUTION"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:id="@+id/btnlogin"
+        android:id="@+id/btnkirim"
         android:textColor="#000"
+        android:background="@drawable/custom2"
         android:theme="@style/buttonstyle1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="520dp"/>
+        android:layout_marginTop="460dp"/>
 
 
 </RelativeLayout>
+
+    <!--<RadioButton
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/radioweb"
+           android:textSize="20dp"
+           android:layout_marginTop="240dp"
+           android:hint="WEBSITE"
+           android:textColorHighlight="#0000"
+           android:layout_alignParentLeft="true"
+           android:textAlignment="center"
+           android:gravity="center_horizontal" />
+       <RadioButton
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/radiomobile"
+           android:layout_marginTop="270dp"
+           android:hint="ANDROID"
+           android:textSize="20dp"
+           android:textColorHighlight="#0000"
+           android:layout_alignParentLeft="true"
+           android:textAlignment="center"
+           android:gravity="center_horizontal" />
+       <RadioButton
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/radioios"
+           android:layout_marginTop="300dp"
+           android:hint="IOS"
+           android:textSize="20dp"
+           android:textColorHighlight="#0000"
+           android:layout_alignParentLeft="true"
+           android:textAlignment="center"
+           android:gravity="center_horizontal" />
+           -->
