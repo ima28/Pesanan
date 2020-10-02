@@ -10,7 +10,7 @@
     tools:context=".Activity.Akun">
 
     <ImageView
-        android:id="@+id/logo"
+        android:id="@+id/profil"
         android:layout_width="239dp"
         android:layout_height="220dp"
         android:layout_alignParentStart="true"
