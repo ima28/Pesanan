@@ -47,10 +47,11 @@ public class OrderFragment extends Fragment {
                 String semuapesan = "Nama: " + pesan1 + "\n" + "Email: " + pesan2 + "\n" + "Nama Perusahaan: " + pesan3 + "\n" + "Nama Aplikasi: " + pesan4 + "\n" + "Jenis Aplikasi: " + pesan5 + "\n" + "Deskripsi: " + pesan6 + "\n" + "Budget: " + pesan7 + "\n" + "Timeline: " + pesan8;
                 //String Url = "https://api.whatsapp.com/send?phone=6285641187175" ;
 
-                Intent kirimWA = new Intent(Intent.ACTION_SEND);
-                kirimWA.setType("text/plain");
+                Intent kirimWA = new Intent();
+                kirimWA.setAction(Intent.ACTION_SEND);
                 kirimWA.putExtra(Intent.EXTRA_TEXT, semuapesan);
-                kirimWA.putExtra("ima", "+6285641187175" + "@s.whatsapp.net");
+                kirimWA.putExtra("ima", "6285641187175" + "@s.whatsapp.net");
+                kirimWA.setType("text/plain");
                 kirimWA.setPackage("com.whatsapp");
                 startActivity(kirimWA);
 
