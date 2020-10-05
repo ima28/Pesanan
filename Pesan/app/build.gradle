@@ -20,6 +20,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    /**compileOptions {
+        sourceCompability JavaVersion.VERSION_1_8
+        targetCompability JavaVersion.VERSION_1_8
+    }**/
 }
 
 dependencies {

@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.Akun"></activity>
+        <activity android:name=".Activity.Jasa"></activity>
+        <activity android:name=".Activity.Produk" />
+        <activity android:name=".Activity.Akun" />
         <activity android:name=".Activity.Tentang" />
         <activity android:name=".Activity.Login" />
         <activity android:name=".Activity.MainActivity" />
