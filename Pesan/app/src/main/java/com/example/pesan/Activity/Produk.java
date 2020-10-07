@@ -23,7 +23,7 @@ public class Produk extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_produk);
 
-        recyclerView = findViewById(R.id.re);
+        recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
 
         recyclerViewLayoutManager = new GridLayoutManager(this,2);

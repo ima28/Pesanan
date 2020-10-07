@@ -13,7 +13,7 @@ import com.example.pesan.R;
 
 public class Login extends AppCompatActivity {
     EditText edtemail,edtpss;
-    Button btnlogin;
+    Button btnlogin,btnregis;
     SharedPreferencesLogin sharedPreferencesLogin;
 
     @Override

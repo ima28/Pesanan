@@ -7,11 +7,22 @@
     android:orientation="horizontal"
     tools:context=".Fragment.OrderFragment">
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="220dp"
+        android:layout_height="190dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:src="@drawable/logoo"
+        android:textAlignment="center" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/edtnama"
+        android:layout_marginTop="200dp"
         android:hint="Nama"
         android:textColorHighlight="#0000"
         android:layout_alignParentLeft="true"
@@ -24,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/edtemail"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="250dp"
         android:hint="Email"
         android:textColorHighlight="#0000"
         android:layout_alignParentLeft="true"
@@ -37,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/edtnamaperusahaan"
-        android:layout_marginTop="95dp"
+        android:layout_marginTop="300dp"
         android:hint="Nama Perusahaan"
         android:textColorHighlight="#0000"
         android:layout_alignParentLeft="true"
@@ -50,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/edtaplikasi"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="350dp"
         android:hint="Nama Aplikasi"
         android:textColorHighlight="#0000"
         android:layout_alignParentLeft="true"
@@ -63,7 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/edtjenisapk"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="400dp"
         android:hint="Jenis Aplikasi"
         android:textColorHighlight="#0000"
         android:layout_alignParentLeft="true"
@@ -77,7 +88,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:id="@+id/edtdeskripsi"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="450dp"
         android:hint="Deskripsi"
         android:textColorHighlight="#0000"
         android:layout_alignParentLeft="true"
@@ -90,7 +101,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/edtbudget"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="550dp"
         android:hint="Budget"
         android:textColorHighlight="#0000"
         android:layout_alignParentLeft="true"
@@ -103,7 +114,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/edttimeline"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="590dp"
         android:hint="Timeline"
         android:textColorHighlight="#0000"
         android:layout_alignParentLeft="true"
@@ -123,7 +134,7 @@
         android:background="@drawable/custom2"
         android:theme="@style/buttonstyle1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="460dp"/>
+        android:layout_marginTop="640dp"/>
 
 
 </RelativeLayout>

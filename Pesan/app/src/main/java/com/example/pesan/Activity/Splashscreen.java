@@ -19,7 +19,7 @@ public class Splashscreen extends AppCompatActivity {private int load=1000;
             @Override
             public void run() {
 
-                Intent login=new Intent(Splashscreen.this, Login.class);
+                Intent login=new Intent(Splashscreen.this, Register.class);
                 startActivity(login);
 
             }

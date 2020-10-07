@@ -5,12 +5,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.pesan.Activity.Akun;
@@ -18,6 +18,7 @@ import com.example.pesan.Activity.Tentang;
 import com.example.pesan.R;
 
 public class LainFragment extends Fragment {
+    ListView lv;
     Button btnakun,btnlogout,btntentang;
     View view;
 
@@ -42,6 +43,21 @@ public class LainFragment extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment FragmentLain.
      */
+    int[] iconList = new int[]{
+            R.drawable.account,
+            R.drawable.about,
+            R.drawable.logout
+    };
+
+    String[] Headline = {"Account",
+            "About Us",
+            "Logout"
+    };
+    String[] Subhead = {"Edit Profil", "Tentang Perusahaan",
+            "Keluar"
+
+    };
+
     // TODO: Rename and change types and number of parameters
     public static LainFragment newInstance(String param1, String param2) {
         LainFragment fragment = new LainFragment();
@@ -54,9 +70,36 @@ public class LainFragment extends Fragment {
 
     public void onCreateView(LayoutInflater inflater, Bundle savedInstanceState, ViewGroup container) {
         super.onCreate(savedInstanceState);
-        view = inflater.inflate(R.layout.fragmentlainnya, container, false);
-        btnakun = (Button) btnakun.findViewById(R.id.btnakun);
-        btnakun.setOnClickListener(new View.OnClickListener() {
+        View view = inflater.inflate(R.layout.fragmentlainnya, container, false);
+        lv.findViewById(R.id.list);
+        ListAdapter listAdapter = new com.example.pesan.Adapter.ListAdapter(this, iconList, Headline, Subhead);
+        lv.setAdapter((android.widget.ListAdapter) listAdapter);
+        lv.setOnClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                if (position == 0) {
+                    Intent intent = new Intent(view.getContext(), Akun.class);
+                    startActivityForResult(intent, 0);
+                }
+
+                if (position == 2) {
+                    Intent i = new Intent(view.getContext(), Tentang.class);
+                    startActivityForResult(i, 0);
+
+                }
+                Toast.makeText(getApplicationContext(),
+                        "You have selected : " + Headline[position],
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+    }
+
+
+
+
+
+        /**btnakun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 btnakun();
@@ -106,4 +149,4 @@ public class LainFragment extends Fragment {
         // Inflate the l ayout for this fragment
         return inflater.inflate(R.layout.fragmentlainnya, container, false);
     }
-}
+}**/
