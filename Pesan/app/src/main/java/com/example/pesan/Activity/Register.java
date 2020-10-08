@@ -40,8 +40,7 @@ public class Register extends AppCompatActivity {
         btnregister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Register.this, Login.class));
-                finish();
+                Register();
 
             }
         });
@@ -49,7 +48,7 @@ public class Register extends AppCompatActivity {
     }
 
 
-    public void userRegis(){
+    public void Register(){
 
         String nama=edtnama.getText().toString();
         String email=edtemaill.getText().toString();

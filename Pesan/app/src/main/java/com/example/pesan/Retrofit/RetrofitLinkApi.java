@@ -24,7 +24,7 @@ public class RetrofitLinkApi {
         okHttpClient.addInterceptor(httpLoggingInterceptor).build();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("192.168.100.168:8080/api/")
+                .baseUrl("192.168.1.5:8082/api/")
                 .client(okHttpClient.build())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();

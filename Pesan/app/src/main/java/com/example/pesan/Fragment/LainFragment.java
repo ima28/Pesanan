@@ -71,7 +71,7 @@ public class LainFragment extends Fragment {
     public void onCreateView(LayoutInflater inflater, Bundle savedInstanceState, ViewGroup container) {
         super.onCreate(savedInstanceState);
         View view = inflater.inflate(R.layout.fragmentlainnya, container, false);
-        lv.findViewById(R.id.list);
+        /**lv.findViewById(R.id.list);
         ListAdapter listAdapter = new com.example.pesan.Adapter.ListAdapter(this, iconList, Headline, Subhead);
         lv.setAdapter((android.widget.ListAdapter) listAdapter);
         lv.setOnClickListener(new AdapterView.OnItemClickListener() {
@@ -93,13 +93,13 @@ public class LainFragment extends Fragment {
             }
         });
     }
-    }
+    }*/
 
 
 
 
 
-        /**btnakun.setOnClickListener(new View.OnClickListener() {
+        btnakun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 btnakun();
@@ -149,4 +149,5 @@ public class LainFragment extends Fragment {
         // Inflate the l ayout for this fragment
         return inflater.inflate(R.layout.fragmentlainnya, container, false);
     }
-}**/
+}
+

@@ -2,7 +2,8 @@
     <string name="app_name">Pemesanan</string>
     <string name="HOME">HOME</string>
     <string name="ORDER">ORDER</string>
-    <string name="PROFILE">PROFILE</string>
+    <string name="PROFILE">MENU</string>
+    <string name="List">ListView Click Intent</string>
     <string name="tentang">Kami adalah salah satu perusahaan IT di Indonesia yang melayani jasa perencanaan,
                            pengembangan dan pengelolaan sistem serta aplikasi berskala kecil hingga besar.
                            Dengan menguasai berbagai platform development tools terutama yang menggunakan teknologi
