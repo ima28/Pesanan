@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -18,10 +19,8 @@ import com.example.pesan.Activity.Tentang;
 import com.example.pesan.R;
 
 public class LainFragment extends Fragment {
-    ListView lv;
-    Button btnakun,btnlogout,btntentang;
-    View view;
-
+    ArrayAdapter<String> a;
+    ListView listview;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -67,39 +66,69 @@ public class LainFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
+    @Override
+    public View onCreateView(LayoutInflater i, ViewGroup c, Bundle s) {
+        View rootView = i.inflate(R.layout.fragmentlainnya, c, false);
 
-    public void onCreateView(LayoutInflater inflater, Bundle savedInstanceState, ViewGroup container) {
-        super.onCreate(savedInstanceState);
-        View view = inflater.inflate(R.layout.fragmentlainnya, container, false);
-        /**lv.findViewById(R.id.list);
-        ListAdapter listAdapter = new com.example.pesan.Adapter.ListAdapter(this, iconList, Headline, Subhead);
-        lv.setAdapter((android.widget.ListAdapter) listAdapter);
-        lv.setOnClickListener(new AdapterView.OnItemClickListener() {
+        listview = (ListView)rootView.findViewById(R.id.list);
+
+        // ArrayAdapter<T> = T Tergantung Dari Tipe Data Variabel,
+        // Jika String Maka Isi String, Jika Integer Maka Tulis Integer
+        a = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, Headline);
+        //ListAdapter la = new ListAdapter(this,iconList,Headline,Subhead);
+        // set data
+        listview.setAdapter(a);
+        // klik item array
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                if (position == 0) {
-                    Intent intent = new Intent(view.getContext(), Akun.class);
-                    startActivityForResult(intent, 0);
+            public void onItemClick(AdapterView<?> pa, View v, int p, long id) {
+               if (p == 0){
+                    // klik intent
+                    Intent i = new Intent(getActivity(), Akun.class);
+                    i.putExtra("varEmployee", Headline[p]);
+                    startActivity(i);
                 }
-
-                if (position == 2) {
-                    Intent i = new Intent(view.getContext(), Tentang.class);
-                    startActivityForResult(i, 0);
-
-                }
-                Toast.makeText(getApplicationContext(),
-                        "You have selected : " + Headline[position],
-                        Toast.LENGTH_SHORT).show();
+               if (p == 1){
+                   Intent in = new Intent(getActivity(), Tentang.class);
+                   in.putExtra("varEmployee", Headline[p]);
+                   startActivity(in);
+               }
             }
         });
+
+        return rootView;
     }
-    }*/
+}
+
+/**lv.findViewById(R.id.list);
+ListAdapter listAdapter = new com.example.pesan.Adapter.ListAdapter(this, iconList, Headline, Subhead);
+lv.setAdapter((android.widget.ListAdapter) listAdapter);
+lv.setOnClickListener(new AdapterView.OnItemClickListener() {
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+        if (position == 0) {
+            Intent intent = new Intent(view.getContext(), Akun.class);
+            startActivityForResult(intent, 0);
+        }
+
+        if (position == 2) {
+            Intent i = new Intent(view.getContext(), Tentang.class);
+            startActivityForResult(i, 0);
+
+        }
+        Toast.makeText(getApplicationContext(),
+                "You have selected : " + Headline[position],
+                Toast.LENGTH_SHORT).show();
+    }
+});
+}
+}*/
 
 
 
 
 
-        btnakun.setOnClickListener(new View.OnClickListener() {
+        /**btnakun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 btnakun();
@@ -140,14 +169,10 @@ public class LainFragment extends Fragment {
        // if (getArguments() != null) {
             //mParam1 = getArguments().getString(ARG_PARAM1);
          //   mParam2 = getArguments().getString(ARG_PARAM2);
-       // }
+       // }*/
 
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the l ayout for this fragment
-        return inflater.inflate(R.layout.fragmentlainnya, container, false);
-    }
-}
+
+
+
 

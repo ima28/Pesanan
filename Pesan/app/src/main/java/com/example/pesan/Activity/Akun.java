@@ -19,26 +19,48 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.example.pesan.Fragment.LainFragment;
 import com.example.pesan.R;
 
 import org.jetbrains.annotations.Nullable;
 
 public class Akun extends AppCompatActivity {
-    EditText enama, eemail, epass;
-    Button btnubah, btnsimpan;
-    ImageView profil;
-    private static final int SELECT_IMAGE = 100;
+    TextView enama, eemail, epass,enotlp;
+    Button btnkembali;
+    //private static final int SELECT_IMAGE = 100;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_akun);
 
+        enama = findViewById(R.id.eusernama);
+        eemail = findViewById(R.id.eemail);
+        epass = findViewById(R.id.epassword);
+        enotlp = findViewById(R.id.enotlp);
 
-        enama = findViewById(R.id.enama);
+        btnkembali = findViewById(R.id.btnkembali);
+        btnkembali.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String Username = enama.getText().toString();
+                String Email = eemail.getText().toString();
+                String Password = epass.getText().toString();
+                String NoTlp = enotlp.getText().toString();
+                Intent i = new Intent(Akun.this, LainFragment.class);
+                startActivity(i);
+            }
+        });
+    }
+}
+
+
+
+        /**enama = findViewById(R.id.enama);
         eemail = findViewById(R.id.eemail);
         epass = findViewById(R.id.epasword);
 
@@ -75,5 +97,4 @@ protected void onActivityResult(int requestCode, int resultCode, @Nullable Inten
             profil.setImageBitmap(BitmapFactory.decodeFile(picturePath));
 
         }
-    }
-    }
+    }*/

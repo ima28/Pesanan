@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.pesan.Activity.ItemModel;
+import com.example.pesan.Model.ItemModel;
 import com.example.pesan.R;
 
 import java.util.ArrayList;

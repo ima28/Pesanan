@@ -10,44 +10,33 @@
     tools:context=".Activity.Akun">
 
     <ImageView
-        android:id="@+id/profil"
+        android:id="@+id/logo"
         android:layout_width="239dp"
         android:layout_height="220dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="70dp"
         android:layout_marginLeft="50dp"
-        android:src="@drawable/ic_launcher_background"
+        android:src="@drawable/logoo"
         android:textAlignment="center" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GANTI FOTO"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:id="@+id/btngantifoto"
-        android:textColor="#000"
-        android:background="@drawable/custom2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="250dp"/>
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/enama"
-        android:layout_marginTop="320dp"
-        android:hint="Nama"
+        android:id="@+id/eusernama"
+        android:layout_marginTop="260dp"
+        android:hint="Username"
         android:textColorHighlight="#0000"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:textAlignment="center"
         android:layout_alignParentEnd="true"/>
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/eemail"
-        android:layout_marginTop="380dp"
+        android:layout_marginTop="320dp"
         android:hint="Email"
         android:textColorHighlight="#0000"
         android:layout_alignParentLeft="true"
@@ -55,11 +44,11 @@
         android:layout_alignParentRight="true"
         android:textAlignment="center"
         android:layout_alignParentEnd="true"/>
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/epasword"
-        android:layout_marginTop="450dp"
+        android:id="@+id/epassword"
+        android:layout_marginTop="380dp"
         android:hint="Password"
         android:textColorHighlight="#0000"
         android:layout_alignParentLeft="true"
@@ -67,17 +56,31 @@
         android:layout_alignParentRight="true"
         android:textAlignment="center"
         android:layout_alignParentEnd="true"/>
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SIMPAN"
-        android:textSize="25sp"
+        android:id="@+id/enotlp"
+        android:layout_marginTop="450dp"
+        android:hint="No Telepon"
+        android:textColorHighlight="#0000"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:textAlignment="center"
+        android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="KEMBALI"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:id="@+id/btnsimpan"
+        android:id="@+id/btnkembali"
         android:textColor="#000"
         android:background="@drawable/custom2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="510dp"/>
+        android:layout_marginTop="500dp"/>
+
 
 
 </RelativeLayout>

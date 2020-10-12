@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.example.pesan.Adapter.AdapterRecyclerView;
+import com.example.pesan.Model.ItemModel;
 import com.example.pesan.R;
 
 import java.util.ArrayList;

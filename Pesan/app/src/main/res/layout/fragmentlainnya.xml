@@ -7,14 +7,14 @@
     android:padding="10dp"
     tools:context=".Fragment.LainFragment">
 
-    <!--<ListView
+    <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />-->
+        android:layout_height="wrap_content" />
 
 
 
-    <Button
+    <!--<Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="AKUN"
@@ -51,7 +51,7 @@
         android:textColor="#000"
         android:theme="@style/buttonstyle1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="140dp"/>
+        android:layout_marginTop="140dp"/>-->
 
 
 

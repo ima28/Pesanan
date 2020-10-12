@@ -1,6 +1,7 @@
-package com.example.pesan.Activity;
+package com.example.pesan.Model;
 
-public class ItemModel { private String name;
+public class ItemModel {
+    private String name;
     private int image;
 
     public ItemModel(String name, String type, int image) {

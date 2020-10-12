@@ -28,4 +28,9 @@
                            Software Sistem Produksi,Software Travel Agent,Software Zakat.
                            Diera modern seperti sekarang ini kebutuhan software adalah hal yang paling penting untuk menunjang stabilitas perusahaan,
                            karena dengan menggunakan program atau sistem software yang canggih tentu perusahaan akan menjadi lebih stabil dalam pengelolaan sistem nya.</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_detail">ListView Detail</string>
+    <string name="hello_world">Hello world!</string>
 </resources>
