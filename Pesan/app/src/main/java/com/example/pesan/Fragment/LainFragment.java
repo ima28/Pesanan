@@ -21,6 +21,7 @@ import com.example.pesan.R;
 public class LainFragment extends Fragment {
     ArrayAdapter<String> a;
     ListView listview;
+    ListAdapter la;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -75,7 +76,7 @@ public class LainFragment extends Fragment {
         // ArrayAdapter<T> = T Tergantung Dari Tipe Data Variabel,
         // Jika String Maka Isi String, Jika Integer Maka Tulis Integer
         a = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, Headline);
-        //ListAdapter la = new ListAdapter(this,iconList,Headline,Subhead);
+        //la = new ListAdapter(this,iconList,R.id.imageList, new  String[] { ""});
         // set data
         listview.setAdapter(a);
         // klik item array

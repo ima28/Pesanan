@@ -13,6 +13,7 @@ import com.example.pesan.Model.ResponRegister;
 import com.example.pesan.R;
 import com.example.pesan.Retrofit.RetrofitLinkApi;
 import com.example.pesan.Retrofit.RetrofitMethod;
+import com.google.gson.JsonObject;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -55,8 +56,14 @@ public class Register extends AppCompatActivity {
         String pass=edtpassword.getText().toString();
         String phone=edtnotlp.getText().toString();
 
+        JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty("nameOrd", String.valueOf(nama));
+        jsonObject.addProperty("username", String.valueOf(email));
+        jsonObject.addProperty("email", String.valueOf(pass));
+        jsonObject.addProperty("password", String.valueOf(phone));
+
         RetrofitMethod retrofitMethod =  RetrofitLinkApi.getRetrofitLogin().create(RetrofitMethod.class);
-        Call<ResponRegister> call= retrofitMethod.registerUser(nama,email,pass,phone);
+        Call<ResponRegister> call= retrofitMethod.registerUser(jsonObject);
         call.enqueue(new Callback<ResponRegister>() {
             @Override
             public void onResponse(Call<ResponRegister> call, Response<ResponRegister> response) {

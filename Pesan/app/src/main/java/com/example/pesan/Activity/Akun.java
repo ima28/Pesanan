@@ -47,10 +47,10 @@ public class Akun extends AppCompatActivity {
         btnkembali.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String Username = enama.getText().toString();
-                String Email = eemail.getText().toString();
-                String Password = epass.getText().toString();
-                String NoTlp = enotlp.getText().toString();
+                /**String Username = enama.getText().toString();
+                 String Email = eemail.getText().toString();
+                 String Password = epass.getText().toString();
+                 String NoTlp = enotlp.getText().toString();*/
                 Intent i = new Intent(Akun.this, LainFragment.class);
                 startActivity(i);
             }
@@ -60,41 +60,41 @@ public class Akun extends AppCompatActivity {
 
 
 
-        /**enama = findViewById(R.id.enama);
-        eemail = findViewById(R.id.eemail);
-        epass = findViewById(R.id.epasword);
+/**enama = findViewById(R.id.enama);
+eemail = findViewById(R.id.eemail);
+epass = findViewById(R.id.epasword);
 
-        profil = findViewById(R.id.profil);
-        btnubah = findViewById(R.id.btngantifoto);
-        btnubah.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(
-                        Intent.ACTION_PICK,
-                        MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-
-                startActivityForResult(i, SELECT_IMAGE);
-            }
-        });
-        }
-
+profil = findViewById(R.id.profil);
+btnubah = findViewById(R.id.btngantifoto);
+btnubah.setOnClickListener(new View.OnClickListener() {
     @Override
+    public void onClick(View view) {
+        Intent i = new Intent(
+                Intent.ACTION_PICK,
+                MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+        startActivityForResult(i, SELECT_IMAGE);
+    }
+});
+}
+
+@Override
 protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == SELECT_IMAGE && resultCode == RESULT_OK && null != data) {
-            Uri selectedImage = data.getData();
-            String[] filePathColumn = {MediaStore.Images.Media.DATA};
-            Cursor cursor = getContentResolver().query(selectedImage,
-                    filePathColumn, null, null, null);
-            cursor.moveToFirst();
+if (requestCode == SELECT_IMAGE && resultCode == RESULT_OK && null != data) {
+    Uri selectedImage = data.getData();
+    String[] filePathColumn = {MediaStore.Images.Media.DATA};
+    Cursor cursor = getContentResolver().query(selectedImage,
+            filePathColumn, null, null, null);
+    cursor.moveToFirst();
 
-            int columIndex = cursor.getColumnIndex(filePathColumn[0]);
-            String picturePath = cursor.getString(columIndex);
-            cursor.close();
+    int columIndex = cursor.getColumnIndex(filePathColumn[0]);
+    String picturePath = cursor.getString(columIndex);
+    cursor.close();
 
-            ImageView profil = findViewById(R.id.profil);
-            profil.setImageBitmap(BitmapFactory.decodeFile(picturePath));
+    ImageView profil = findViewById(R.id.profil);
+    profil.setImageBitmap(BitmapFactory.decodeFile(picturePath));
 
-        }
-    }*/
+}
+}*/

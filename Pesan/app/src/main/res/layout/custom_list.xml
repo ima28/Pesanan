@@ -17,6 +17,7 @@ android:padding="16dp">
     android:layout_marginLeft="8dp"
     android:orientation="vertical">
 
+
     <TextView
         android:id="@+id/text_headline"
         style="@style/TextAppearance.AppCompat.Title"

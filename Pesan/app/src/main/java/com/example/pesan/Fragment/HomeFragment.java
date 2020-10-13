@@ -1,13 +1,18 @@
 package com.example.pesan.Fragment;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.pesan.Activity.Jasa;
+import com.example.pesan.Activity.Produk;
+import com.example.pesan.Activity.Tentang;
 import com.example.pesan.Adapter.ImageAdapter;
 import com.example.pesan.R;
 import com.smarteist.autoimageslider.IndicatorAnimations;
@@ -15,6 +20,8 @@ import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 
 public class HomeFragment extends Fragment {
+
+    ImageView imgproduk,imgjasa;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -74,9 +81,39 @@ public class HomeFragment extends Fragment {
         sliderView.setIndicatorUnselectedColor(Color.GRAY);
         sliderView.setScrollTimeInSec(4); //set scroll delay in seconds :
         sliderView.startAutoCycle();
-        return  view;
+
         // Inflate the layout for this fragment
+
+        imgproduk = view.findViewById(R.id.produk);
+        imgproduk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getActivity(), Produk.class);
+                startActivity(in);
+            }
+
+        });
+
+        imgjasa = view.findViewById(R.id.jasa);
+        imgjasa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), Jasa.class);
+                startActivity(i);
+            }
+        });
+        return  view;
     }
 
-
+    /**public ImageView getImgproduk() {
+        View view;
+        imgproduk = view.findViewById(R.id.produk);
+        imgproduk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeFragment.this, Produk.class)
+            }
+        });
+        return imgproduk;
+    }*/
 }

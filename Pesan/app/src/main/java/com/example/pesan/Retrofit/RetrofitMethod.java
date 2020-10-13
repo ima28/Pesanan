@@ -2,21 +2,22 @@ package com.example.pesan.Retrofit;
 
 import com.example.pesan.Model.ResponRegister;
 import com.example.pesan.Model.ResponToken;
+import com.google.gson.JsonObject;
 
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
 public interface RetrofitMethod {
-    @FormUrlEncoded
-    @POST("auth/login")
-    Call<ResponRegister> registerUser(@Field("nameOrd") String name, @Field("username") String username, @Field("email") String email, @Field("password") String password);
+    @Headers({
+            "Content-Type:application/json"
+    })
 
-
-    @FormUrlEncoded
-    @POST("auth/login")
-    Call<ResponToken> loginUser(@Field("usernameOrEmai") String usernameOrEmai, @Field("password") String password);
+    @POST("auth/signup")
+    Call<ResponRegister> registerUser(@Body JsonObject body);
 
 }
 
