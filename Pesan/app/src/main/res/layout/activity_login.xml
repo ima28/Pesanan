@@ -10,6 +10,8 @@
     android:orientation="horizontal"
     tools:context=".Activity.Login">
 
+
+
     <ImageView
         android:id="@+id/logo"
         android:layout_width="239dp"
@@ -21,11 +23,17 @@
         android:src="@drawable/logoo"
         android:textAlignment="center" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/back"
+        android:layout_marginTop="230dp">
+
     <EditText
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:id="@+id/edtemail"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="70dp"
         android:hint="ENTER EMAIL"
         android:background="@drawable/ovalcorner"
         android:drawableLeft="@drawable/email"
@@ -43,7 +51,7 @@
         android:id="@+id/edtpss"
         android:inputType="textPassword"
         android:drawableLeft="@drawable/password"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="130dp"
         android:hint="ENTER PASSWORD"
         android:background="@drawable/ovalcorner"
         android:textColorHighlight="#0000"
@@ -64,8 +72,8 @@
         android:textColor="#000"
         android:background="@drawable/custom1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="350dp"/>
+        android:layout_marginTop="190dp"/>
 
-
+</RelativeLayout>
 
 </RelativeLayout>

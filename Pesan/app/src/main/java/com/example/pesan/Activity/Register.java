@@ -69,6 +69,10 @@ public class Register extends AppCompatActivity {
             public void onResponse(Call<ResponRegister> call, Response<ResponRegister> response) {
                 if(response.isSuccessful()){
 
+                    Intent intent = new Intent(Register.this,Login.class);
+                    startActivity(intent);
+                    finish();
+
                 }
 
                 else {
